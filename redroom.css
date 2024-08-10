@@ -1,0 +1,98 @@
+ body {
+   margin: 0;
+   padding: 0;
+   background-color: #000;
+   color: #f00;
+   font-family: 'Courier New', Courier, monospace;
+ }
+
+ .container {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   height: 100vh;
+   overflow: hidden;
+ }
+
+ .red-room {
+   background-color: #330000;
+   color: #f00;
+   padding: 20px;
+   border: 2px solid #f00;
+   box-shadow: 0 0 15px rgba(255, 0, 0, 0.8);
+   border-radius: 10px;
+   text-align: center;
+ }
+
+ .title {
+   font-size: 2em;
+   margin-bottom: 10px;
+   text-shadow: 0 0 10px #f00;
+ }
+
+ .description {
+   font-size: 1.2em;
+   margin-bottom: 20px;
+   text-shadow: 0 0 5px #f00;
+ }
+
+ .btn {
+   background: transparent;
+   border: 2px solid #f00;
+   color: #f00;
+   padding: 10px 20px;
+   margin: 5px;
+   border-radius: 5px;
+   cursor: pointer;
+   font-size: 16px;
+   font-weight: bold;
+   transition: background 0.3s, color 0.3s;
+ }
+
+ .btn:hover {
+   background: #f00;
+   color: #000;
+ }
+
+ .secret {
+   display: none;
+   margin-top: 20px;
+   font-size: 1.2em;
+   text-shadow: 0 0 5px #f00;
+ }
+.sh2{
+  color: red;
+  text-decoration: underline blue 5px;
+  text-shadow: 0px 0px 20px black;
+}
+#input{
+  background-color: #1e1e1e;
+  color: whitesmoke;
+  border: 2px dotted red;
+  font-family: 'Courier New', Courier, monospace;
+  box-shadow: 0px 0px 10px white;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+#input::placeholder{
+  color: red;
+  font-weight: bold;
+}
+#search{
+  background-color: #1e1e1e;
+  color: whitesmoke;
+  border: 2px dotted red;
+  font-family: 'Courier New', Courier, monospace;
+  box-shadow: 0px 0px 10px white;
+  font-weight: bold;
+}
+.saqlain1_btn{
+  background-color: #1e1e1e;
+  color: whitesmoke;
+  border: 2px dotted red;
+  font-family: 'Courier New', Courier, monospace;
+  box-shadow: 0px 0px 10px white;
+  font-weight: bold;
+  text-decoration: none;
+  cursor: pointer;
+}

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Red Room -My JavaScript Practice</title>
+    <link rel="stylesheet" href="redroom.css">
+    <script src="redroom.js" defer></script>
+</head>
+<body>
+ <div class="container">
+    <div class="red-room">
+
+      <input id="input" type="search" placeholder="search content"><button id="search" style="display: none;">Search</button>
+      
+     <p class="title">Welcome to the Red Room</p>
+     <p class="description">Where the darkness consumes all...</p>
+     
+     <button class="btn" onclick="alert('Here, there is no escape. Every click, every move is being watched.')">ALERT</button>
+     <button class="btn" onclick="alert('REMEMBER! it is harmful!')">Remember</button>
+      <button class="btn" onclick="showMessage()">Watch Videos</button>
+      
+       <p id="secret" class="secret">Shhh... The secret is hidden. Only for education purpuse or awearness...<br><br>
+  <span class="sh2">1. Shooting a Man</span>     
+  <iframe src="https://www.youtube.com/embed/K6O8cF9ZHnQ" frameborder="0" allowfullscreen></iframe>
+            </p> <br><br>
+  <a class="saqlain1_btn" href="JavaScript.html">Go Back</a>            
+        </div>
+    </div>
+  
+    <script>
+function showMessage() {
+  alert("These vidos may disturb you or disturb your brain permanently.....so move back otherwise we are not responsible for any accedient....");
+  const secret = document.getElementById('secret');
+  secret.style.display = 'block';
+};
+
+document.getElementById("input").onclick = function() {
+  document.getElementById("search").style.display = "inline";
+};
+document.getElementById("search").onclick = function() {
+  alert("you are not able to see your searched content..... because it is too horrible and disturbing......")
+}
+
+    </script>
+</body>
+</html>

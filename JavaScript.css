@@ -1,0 +1,496 @@
+body {
+      background-color: darkgrey;
+     /* font-family:  'Courier New', Courier, monospace;*/
+    }
+    #saqlain {
+      border: 2px solid black;
+      color: red;
+      padding: 10px;
+      background-color: #2b2b2b;
+    }
+    .saqlain {
+      border: 2px solid black;
+      color: red;
+      padding: 10px;
+      background-color: #2b2b2b;
+      text-align: center;
+      font-family: 'Courier New', Courier, monospace;
+    }
+    #get {
+      border: 2px solid black;
+      color: red;
+      padding: 10px;
+      background-color: #2b2b2b;
+    }
+    .h2s {
+      color: red;
+      text-decoration: underline blue 5px;
+      text-shadow: 0px 0px 20px black;
+    }
+    .btn {
+      position: relative;
+      width: 100%;
+      height: 45px;
+      background: transparent;
+      border: 2px solid #0ef;
+      outline: none;
+      border-radius: 40px;
+      cursor: pointer;
+      font-size: 16px;
+      color: #fff;
+      font-weight: 600;
+      z-index: 1;
+      overflow: hidden;
+    }
+    .btn::before {
+      content: '';
+      position: absolute;
+      top: -100px;
+      left: 0;
+      width: 100%;
+      height: 300%;
+      background: linear-gradient(#081b29, #0ef, #081b29, #0ef);
+      z-index: -1;
+      transition: top 0.5s;
+    }
+    .btn:hover::before {
+      top: 0;
+    }
+/*CSS of button which change the body color when clicked*/    
+    #toggleButton {
+      appearance: none;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      width: 60px;
+      height: 30px;
+      background-color: #ccc;
+      border-radius: 15px;
+      position: relative;
+      outline: none;
+      border: none;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+    #toggleButton::before {
+      content: '';
+      width: 26px;
+      height: 26px;
+      background-color: #fff;
+      border-radius: 50%;
+      position: absolute;
+      top: 2px;
+      left: 2px;
+      transition: left 0.3s;
+    }
+    #toggleButton.active {
+      background-color: #4caf50;
+    }
+    #toggleButton.active::before {
+      left: 32px;
+    }
+    .horrible-content{
+      border: 2px solid green;
+      box-shadow: 0px 0px 20px blue;
+      color: red;
+      padding: 10px;
+      background-color: #2b2b2b;
+      text-align: center;
+      /*filter: grayscale(10%) blur(1px);*/
+    }
+    .input{
+    background-color: #1e1e1e;
+    color: #c5c5c5;
+    border: 1px solid #444;
+    border-radius: 5px;
+    padding: 10px;
+    margin-left: 20%;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 16px;
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+.input::placeholder {
+    color: #888;
+}
+
+.input:focus {
+    background-color: #333;
+    border-color: #666;
+    outline: none;
+}
+.change-btn {
+    background-color: #333;
+    color: #c5c5c5;
+    border: 1px solid #444;
+    border-radius: 5px;
+    padding: 10px 20px;
+    margin-left: 20%;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 10px;
+    cursor: pointer;
+    text-align: center;
+    transition: background-color 0.3s, border-color 0.3s, color 0.3s;
+}
+
+.change-btn:hover {
+    background-color: #444;
+    border-color: #666;
+    color: #fff;
+}
+
+.change-btn:focus {
+    outline: none;
+}
+.input-result{
+    background-color: #1e1e1e;
+    color: /*#c5c5c5*/red;
+    border: 1px solid #444;
+    border-radius: 5px;
+    padding: 10px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 16px;
+    transition: background-color 0.3s, border-color 0.3s;
+}
+.change-content-area{
+  background-color: #1e1e1e; /* Dark background color */
+  color: #e0e0e0;
+  border: 1px solid #333; 
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.circle-container {
+    position: relative;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.circle {
+    position: absolute;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(255, 0, 0, 0.5), rgba(0, 0, 0, 0.8));
+    box-shadow: 0 0 15px rgba(255, 0, 0, 0.6);
+    width: 150px;
+    height: 150px;
+    cursor: pointer;
+    animation: pulse 2s infinite;
+}
+
+.circle:nth-child(1) {
+    top: 3%;
+    left: 3%;
+}
+
+.circle:nth-child(2) {
+    top: 10%;
+    left: 10%;
+    animation-duration: 2.5s;
+}
+
+.circle:nth-child(3) {
+    top: 20%;
+    left: 20%;
+    animation-duration: 3s;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    50% {
+        transform: scale(1.2);
+        opacity: 0.7;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+/*@keyframes fog {
+    0% { background-position: 0 0; }
+    100% { background-position: 100% 100%; }
+}
+
+body {
+    background: url('fog.gif') repeat;
+    animation: fog 20s infinite linear;
+}*/
+/*body {
+  animation: glitch 1s infinite;
+}
+@keyframes glitch {
+    0% { transform: translateX(0); }
+    20% { transform: translateX(-10px); }
+    40% { transform: translateX(10px); }
+    60% { transform: translateX(-10px); }
+    80% { transform: translateX(10px); }
+    100% { transform: translateX(0); }
+}*/
+/*.vr{
+  background-color: #1e1e1e;
+  color: whitesmoke;
+  border: 2px dotted red;
+  font-family: 'Courier New', Courier, monospace;
+  box-shadow: 0px 0px 10px white;
+  font-weight: bold;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  text-decoration: none;
+}
+.saqlain1{
+   border: none;
+   color: white;
+   padding: 10px;
+   background-color: #2b2b2b;
+   text-align: center;
+   font-family: 'Courier New', Courier, monospace;
+   margin-top: 100px;
+   float: left;
+   background: transparent;
+   position: fixed;
+}
+.saqlain1_btn{
+  background-color: #1e1e1e;
+  color: whitesmoke;
+  border: 2px dotted red;
+  font-family: 'Courier New', Courier, monospace;
+  box-shadow: 0px 0px 10px white;
+  font-weight: bold;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  text-decoration: none;
+  cursor: pointer;
+}*/
+.vr {
+  background-color: #1e1e1e;
+  color: whitesmoke;
+  border: 2px dotted red;
+  font-family: 'Courier New', Courier, monospace;
+  box-shadow: 0px 0px 10px white;
+  font-weight: bold;
+  padding: 5px 10px;
+  text-decoration: none;
+}
+
+.saqlain1 {
+  color: white;
+  padding: 20px;
+  background-color: #2b2b2b;
+  text-align: center;
+  font-family: 'Courier New', Courier, monospace;
+  position: fixed;
+  top: 50px;
+  left: 20px;
+  z-index: 1000;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+  border-radius: 5px;
+}
+
+.saqlain1_btn {
+  background-color: #1e1e1e;
+  color: whitesmoke;
+  border: 2px dotted red;
+  font-family: 'Courier New', Courier, monospace;
+  box-shadow: 0px 0px 10px white;
+  font-weight: bold;
+  padding: 5px 10px;
+  text-decoration: none;
+  cursor: pointer;
+}
+hr{
+  background-color: red;
+  width: 100px;
+  height: 5px;
+}
+.h1{
+  background-color: #330000;
+  font-family: 'Courier New', Courier, monospace;
+  color: #f00;
+  padding: 20px;
+  border: 2px solid #f00;
+  box-shadow: 0 0 15px rgba(255, 0, 0, 0.8);
+  border-radius: 10px;
+  text-align: center;
+}
+.question{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    filter: blur(2px);
+  }
+.add{
+   background-color: #330000;
+   color: #f00;
+   padding: 20px;
+   border: 2px solid #f00;
+   box-shadow: 0 0 15px rgba(255, 0, 0, 0.8);
+   border-radius: 10px;
+   text-align: center;
+  }
+.start{
+   background: transparent;
+   border: 2px solid #f00;
+   color: #f00;
+   padding: 10px 20px;
+   margin: 5px;
+   border-radius: 5px;
+   cursor: pointer;
+   font-size: 16px;
+   font-weight: bold;
+   transition: background 0.3s, color 0.3s;
+ }
+.start:hover {
+   background: #f00;
+   color: #000;
+ }
+.qs{
+  background-color: #330000;
+  color: white;
+  padding: 20px;
+  font-family: 'Courier New', Courier, monospace;
+  text-align: center;
+}
+#qsd{
+  display: none;
+}
+.ans{
+  background-color: #1e1e1e;
+  color: whitesmoke;
+  border: 2px dotted red;
+  font-family: 'Courier New', Courier, monospace;
+  box-shadow: 0px 0px 10px white;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.ans::placeholder{
+  color: red;
+  font-weight: bold;
+}
+.qbtn{
+  background-color: #1e1e1e;
+  color: whitesmoke;
+  border: 2px dotted red;
+  font-family: 'Courier New', Courier, monospace;
+  box-shadow: 0px 0px 10px white;
+  font-weight: bold;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  text-decoration: none;
+  cursor: pointer;
+}
+#ans2{
+  display: none;
+}
+#ans3{
+  display: none;
+}
+#ans4{
+  display: none;
+}
+
+.ok{
+   background: white;
+   border: 2px solid #f00;
+   color: #f00;
+   padding: 10px 20px;
+   margin: 5px;
+   border-radius: 5px;
+   cursor: pointer;
+   font-size: 16px;
+   position: relative;
+   font-weight: bold;
+   transition: background 0.3s, color 0.3s;
+   z-index: 2;
+   top: 240px;
+   margin-left: 40%;
+ }
+.ok:hover {
+   background: #f00;
+   color: white;
+ }
+.h2s1{
+  color: red;
+  text-decoration: underline blue 5px;
+  text-shadow: 0px 0px 20px black; 
+  text-align: center;
+  font-family: 'Courier New', Courier, monospace;
+ }
+.h2s2{
+  color: red;
+  background-color: red;
+  text-decoration: underline blue 5px;
+  text-shadow: 0px 0px 20px black; 
+  text-align: center;
+  border: 2px solid transparent;
+  /* border-radius: 1500px; */
+  font-family: 'Courier New', Courier, monospace;
+  position: relative;
+  animation: zoom 7s infinite;
+ }
+ @keyframes zoom{
+ 0%{
+  background-color: red;
+  color: red;
+  }
+  25%{
+  background-color: blue; 
+  color: blue;
+   }
+  50%{
+  background-color: red;  
+  color: red;
+   }
+  75%{
+  background-color: blue; 
+  color: blue;
+   }
+  100%{
+  background-color: red;
+  color: red;
+   }
+ }
+.linux{
+  color: blue;
+  padding: 20px;
+  background-color: #000;
+  text-align: center;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: bold;
+  top: 50px;
+  left: 20px;
+  z-index: 1000;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+  border-radius: 5px;
+}
+.linux_btn{
+  background-color: #1e1e1e;
+  color: whitesmoke;
+  border: 2px dotted red;
+  font-family: 'Courier New', Courier, monospace;
+  box-shadow: 0px 0px 10px white;
+  font-weight: bold;
+  padding: 5px 10px;
+  text-decoration: none;
+  cursor: pointer;
+}
+.vl{
+  background-color: #1e1e1e;
+  color: whitesmoke;
+  border: 2px dotted red;
+  font-family: 'Courier New', Courier, monospace;
+  box-shadow: 0px 0px 10px white;
+  font-weight: bold;
+  padding: 5px 10px;
+  text-decoration: none;
+}
